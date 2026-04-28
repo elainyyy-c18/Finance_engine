@@ -37,3 +37,6 @@
    ```bash
    gcc finance_engine.c -o finance_engine
    ./finance_engine
+
+## ✅ 執行後結果截圖
+<img width="1919" height="1133" alt="image" src="https://github.com/user-attachments/assets/50a82894-d7e3-4a89-ae99-26bc005c0488" />
