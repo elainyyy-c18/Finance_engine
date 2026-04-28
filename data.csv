@@ -1,0 +1,6 @@
+id,date,category,amount,description
+1,2026-04-01,Food,150.0,Lunch
+2,2026-04-02,Transport,500.0,Fuel
+3,2026-04-05,Shopping,2500.0,New Monitor
+4,2026-04-07,Food,120.5,Dinner
+5,2026-04-10,Entertainment,1200.0,Movies
