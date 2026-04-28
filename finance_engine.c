@@ -129,7 +129,7 @@ int main()
         printf(" [1] Sort by Amount (High to Low)\n");
         printf(" [2] Sort by Date (Newest to Oldest)\n");
         printf(" [3] Sort by Category (A to Z)\n");
-        printf(" [4] EXPORT current results to CSV\n");
+        printf(" [4] EXPORT CURRENT SORTED RESULTS to CSV\n");
         printf(" [5] Exit Program\n");
         printf("-----------------------------------------\n");
         printf("Please enter your choice (1-5): ");
@@ -163,6 +163,6 @@ int main()
     }
 
     free(list);
-    printf("\nMemory freed. Goodbye!\n");
+    printf("\nMemory freed. Thank you for using financial C-Engine!\n");
     return 0;
 }
