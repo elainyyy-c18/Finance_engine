@@ -34,6 +34,29 @@ int compareByCategory(const void *a, const void *b)
     return strcmp(t1->category, t2->category);
 }
 
+void exportToCSV(Transaction *list, int count) 
+{
+    char export_name[] = "sorted_export.csv";
+    FILE *file = fopen(export_name, "w");
+    
+    if (!file) 
+    {
+        printf("\nError: Could not create export file.\n");
+        return;
+    }
+
+    fprintf(file, "id,date,category,amount,description\n");
+
+    for (int i = 0; i < count; i++) 
+    {
+        fprintf(file, "%d,%s,%s,%.2f,%s\n", 
+                list[i].id, list[i].date, list[i].category, list[i].amount, list[i].description);
+    }
+
+    fclose(file);
+    printf("\n>>> SUCCESS: Exported %d records to '%s' <<<\n", count, export_name);
+}
+
 int main() 
 {
     char filename[] = "data.csv";
@@ -45,30 +68,28 @@ int main()
         return 1;
     }
 
-    int capacity = 1000; // Start with a base capacity of 1000
+    int capacity = 1000; 
     int count = 0;
     Transaction *list = (Transaction *)malloc(capacity * sizeof(Transaction));
     
-    if (list == NULL) 
+    if (list == NULL) \
     {
-        printf("Error: Initial memory allocation failed.\n");
+        printf("Error: Memory allocation failed.\n");
         fclose(file);
         return 1;
     }
 
     char line[150];
-    fgets(line, sizeof(line), file);
+    fgets(line, sizeof(line), file); // Skip header
 
-    while (fgets(line, sizeof(line), file)) 
+    while (fgets(line, sizeof(line), file)) \
     {
         if (count >= capacity) 
         {
-            capacity *= 2; // Double capacity when full
+            capacity *= 2; 
             Transaction *temp = (Transaction *)realloc(list, capacity * sizeof(Transaction));
-            
             if (temp == NULL) 
             {
-                printf("Error: Memory reallocation failed at %d records.\n", count);
                 free(list);
                 fclose(file);
                 return 1;
@@ -76,8 +97,7 @@ int main()
             list = temp;
         }
 
-        char *token;
-        token = strtok(line, ",");
+        char *token = strtok(line, ",");
         if (!token) continue;
         list[count].id = atoi(token);
 
@@ -109,41 +129,40 @@ int main()
         printf(" [1] Sort by Amount (High to Low)\n");
         printf(" [2] Sort by Date (Newest to Oldest)\n");
         printf(" [3] Sort by Category (A to Z)\n");
-        printf(" [4] Exit Program\n");
+        printf(" [4] EXPORT current results to CSV\n");
+        printf(" [5] Exit Program\n");
         printf("-----------------------------------------\n");
-        printf("Please enter your choice (1-4): ");
+        printf("Please enter your choice (1-5): ");
         
         if (scanf("%d", &choice) != 1) 
         {
-            printf("\nInvalid input. Program exiting to protect memory.\n");
+            printf("\nInvalid input. Exiting...\n");
             break;
         }
 
-        if (choice == 4) break;
+        if (choice == 5) break;
 
         switch (choice) 
         {
-            case 1: qsort(list, count, sizeof(Transaction), compareByAmount); break;
-            case 2: qsort(list, count, sizeof(Transaction), compareByDate); break;
-            case 3: qsort(list, count, sizeof(Transaction), compareByCategory); break;
-            default: printf("\nInvalid choice. Please try again.\n"); continue;
+            case 1: qsort(list, count, sizeof(Transaction), compareByAmount); printf("\nSorted by Amount.\n"); break;
+            case 2: qsort(list, count, sizeof(Transaction), compareByDate); printf("\nSorted by Date.\n"); break;
+            case 3: qsort(list, count, sizeof(Transaction), compareByCategory); printf("\nSorted by Category.\n"); break;
+            case 4: exportToCSV(list, count); continue; 
+            default: printf("\nInvalid choice.\n"); continue;
         }
 
         printf("\n%-5s | %-12s | %-15s | %-10s\n", "ID", "Date", "Category", "Amount");
         printf("-------------------------------------------------------\n");
         int limit = (count > 15) ? 15 : count;
-        for (int i = 0; i < limit; i++) {
+        for (int i = 0; i < limit; i++) 
+        {
             printf("%-5d | %-12s | %-15s | %10.2f\n", 
                    list[i].id, list[i].date, list[i].category, list[i].amount);
         }
-        
-        if (count > 15) 
-        {
-            printf("... (Total %d records loaded | Memory Capacity: %d) ...\n", count, capacity);
-        }
+        printf("... (Processed %d records | Capacity: %d) ...\n", count, capacity);
     }
 
     free(list);
-    printf("\nMemory freed. Thank you for using C-Engine!\n");
+    printf("\nMemory freed. Goodbye!\n");
     return 0;
 }
