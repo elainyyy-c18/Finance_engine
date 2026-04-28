@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Define Transaction structure
-typedef struct {
+typedef struct 
+{
     int id;
     char date[11];      // YYYY-MM-DD
     char category[30];  // Transaction category
@@ -11,8 +11,8 @@ typedef struct {
     char description[50];
 } Transaction;
 
-// [Sorting Logic 1] Descending order by Amount
-int compareByAmount(const void *a, const void *b) {
+int compareByAmount(const void *a, const void *b) 
+{
     Transaction *t1 = (Transaction *)a;
     Transaction *t2 = (Transaction *)b;
     if (t1->amount < t2->amount) return 1;
@@ -20,67 +20,65 @@ int compareByAmount(const void *a, const void *b) {
     return 0;
 }
 
-// [Sorting Logic 2] Newest to Oldest by Date
-int compareByDate(const void *a, const void *b) {
+int compareByDate(const void *a, const void *b) 
+{
     Transaction *t1 = (Transaction *)a;
     Transaction *t2 = (Transaction *)b;
     return strcmp(t2->date, t1->date);
 }
 
-// [Sorting Logic 3] Alphabetical order by Category
-int compareByCategory(const void *a, const void *b) {
+int compareByCategory(const void *a, const void *b) 
+{
     Transaction *t1 = (Transaction *)a;
     Transaction *t2 = (Transaction *)b;
     return strcmp(t1->category, t2->category);
 }
 
-int main() {
+int main() 
+{
     char filename[] = "data.csv";
     FILE *file = fopen(filename, "r");
 
-    if (!file) {
+    if (!file) 
+    {
         printf("Error: Cannot find %s. Please ensure the file exists.\n", filename);
         return 1;
     }
 
-    // ==========================================
-    // CS Core Concept: Dynamic Array Initialization
-    // ==========================================
     int capacity = 1000; // Start with a base capacity of 1000
     int count = 0;
     Transaction *list = (Transaction *)malloc(capacity * sizeof(Transaction));
     
-    if (list == NULL) {
+    if (list == NULL) 
+    {
         printf("Error: Initial memory allocation failed.\n");
         fclose(file);
         return 1;
     }
 
     char line[150];
-    fgets(line, sizeof(line), file); // Skip header
+    fgets(line, sizeof(line), file);
 
-    // Parsing Logic with Dynamic Resizing
-    while (fgets(line, sizeof(line), file)) {
-        
-        // ==========================================
-        // CS Core Concept: Auto-Resizing (realloc)
-        // ==========================================
-        if (count >= capacity) {
-            capacity *= 2; // Double the capacity when full
+    while (fgets(line, sizeof(line), file)) 
+    {
+        if (count >= capacity) 
+        {
+            capacity *= 2; // Double capacity when full
             Transaction *temp = (Transaction *)realloc(list, capacity * sizeof(Transaction));
             
-            if (temp == NULL) {
+            if (temp == NULL) 
+            {
                 printf("Error: Memory reallocation failed at %d records.\n", count);
-                free(list); // Prevent memory leak before crashing
+                free(list);
                 fclose(file);
                 return 1;
             }
-            list = temp; // Point to the newly expanded memory block
+            list = temp;
         }
 
         char *token;
         token = strtok(line, ",");
-        if (!token) continue; // Safety check for empty lines
+        if (!token) continue;
         list[count].id = atoi(token);
 
         token = strtok(NULL, ",");
@@ -93,7 +91,8 @@ int main() {
         if (token) list[count].amount = atof(token);
 
         token = strtok(NULL, ",");
-        if (token) {
+        if (token) 
+        {
             token[strcspn(token, "\n")] = 0;
             strcpy(list[count].description, token);
         }
@@ -102,7 +101,8 @@ int main() {
     fclose(file);
 
     int choice;
-    while (1) {
+    while (1) 
+    {
         printf("\n=========================================\n");
         printf("    Financial Data Processing Engine     \n");
         printf("=========================================\n");
@@ -113,21 +113,22 @@ int main() {
         printf("-----------------------------------------\n");
         printf("Please enter your choice (1-4): ");
         
-        if (scanf("%d", &choice) != 1) {
+        if (scanf("%d", &choice) != 1) 
+        {
             printf("\nInvalid input. Program exiting to protect memory.\n");
             break;
         }
 
         if (choice == 4) break;
 
-        switch (choice) {
+        switch (choice) 
+        {
             case 1: qsort(list, count, sizeof(Transaction), compareByAmount); break;
             case 2: qsort(list, count, sizeof(Transaction), compareByDate); break;
             case 3: qsort(list, count, sizeof(Transaction), compareByCategory); break;
             default: printf("\nInvalid choice. Please try again.\n"); continue;
         }
 
-        // Display results (Limit to top 15 for better readability)
         printf("\n%-5s | %-12s | %-15s | %-10s\n", "ID", "Date", "Category", "Amount");
         printf("-------------------------------------------------------\n");
         int limit = (count > 15) ? 15 : count;
@@ -136,13 +137,13 @@ int main() {
                    list[i].id, list[i].date, list[i].category, list[i].amount);
         }
         
-        // Show exactly how many records were processed and current capacity
-        if (count > 15) {
+        if (count > 15) 
+        {
             printf("... (Total %d records loaded | Memory Capacity: %d) ...\n", count, capacity);
         }
     }
 
-    free(list); // Critical: Free the massive heap memory we requested
+    free(list);
     printf("\nMemory freed. Thank you for using C-Engine!\n");
     return 0;
 }
