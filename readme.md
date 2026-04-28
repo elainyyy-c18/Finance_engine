@@ -44,7 +44,8 @@
 <img width="1389" height="928" alt="image" src="https://github.com/user-attachments/assets/0e44f1be-d7b9-41a6-8fc5-fe1ca0e3805b" />
 
 ### 2. 執行選單選項 4 後匯出至 Excel (CSV 格式)：
-<img width="1919" height="1133" alt="image" src="https://github.com/user-attachments/assets/50a82894-d7e3-4a89-ae99-26bc005c0488" />
+<img width="1919" height="1131" alt="image" src="https://github.com/user-attachments/assets/032d6fd0-c3a2-492f-93d1-3f7d97c0d2d1" />
+
 
 
 
