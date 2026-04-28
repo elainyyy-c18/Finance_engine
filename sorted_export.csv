@@ -1,101 +1,101 @@
 id,date,category,amount,description
-1,2026-01-02,Food,150.00,Breakfast
-2,2026-01-02,Transport,30.00,MRT
-3,2026-01-03,Food,250.00,Lunch
-4,2026-01-04,Shopping,1200.00,Clothes
-5,2026-01-05,Entertainment,350.00,Movie Ticket
-6,2026-01-06,Food,120.00,Dinner
-7,2026-01-07,Utilities,800.00,Internet Bill
-8,2026-01-08,Transport,500.00,Gas
-9,2026-01-09,Food,60.00,Coffee
-10,2026-01-10,Shopping,450.00,Books
-11,2026-01-11,Food,300.00,Lunch with friends
-12,2026-01-12,Transport,35.00,Bus
-13,2026-01-13,Health,500.00,Pharmacy
-14,2026-01-14,Food,180.00,Dinner
-15,2026-01-15,Entertainment,1500.00,Concert Ticket
-16,2026-01-16,Food,85.00,Snacks
-17,2026-01-17,Shopping,2300.00,Shoes
-18,2026-01-18,Transport,120.00,Uber
-19,2026-01-19,Food,140.00,Lunch
-20,2026-01-20,Utilities,650.00,Water Bill
-21,2026-01-21,Food,210.00,Dinner
-22,2026-01-22,Transport,30.00,MRT
-23,2026-01-23,Shopping,890.00,Groceries
-24,2026-01-24,Food,75.00,Breakfast
-25,2026-01-25,Entertainment,400.00,Board Game
-26,2026-01-26,Food,160.00,Lunch
-27,2026-01-27,Transport,30.00,MRT
-28,2026-01-28,Health,200.00,Clinic
-29,2026-01-29,Food,350.00,Dinner
 30,2026-01-30,Shopping,5500.00,New Monitor
-31,2026-02-01,Food,130.00,Breakfast
-32,2026-02-02,Utilities,1200.00,Electricity Bill
-33,2026-02-03,Transport,35.00,Bus
-34,2026-02-04,Food,220.00,Lunch
-35,2026-02-05,Entertainment,320.00,Movie
-36,2026-02-06,Shopping,450.00,Stationery
-37,2026-02-07,Food,190.00,Dinner
-38,2026-02-08,Transport,150.00,Uber
-39,2026-02-09,Food,65.00,Coffee
-40,2026-02-10,Health,800.00,Vitamins
-41,2026-02-11,Food,145.00,Lunch
-42,2026-02-12,Transport,30.00,MRT
-43,2026-02-13,Shopping,1100.00,Jacket
-44,2026-02-14,Entertainment,2500.00,Valentine Dinner
-45,2026-02-15,Food,100.00,Breakfast
-46,2026-02-16,Transport,500.00,Gas
-47,2026-02-17,Utilities,800.00,Internet Bill
-48,2026-02-18,Food,280.00,Lunch
-49,2026-02-19,Shopping,300.00,Gift
-50,2026-02-20,Food,170.00,Dinner
-51,2026-02-21,Transport,35.00,Bus
-52,2026-02-22,Entertainment,600.00,Exhibition
-53,2026-02-23,Food,90.00,Snacks
-54,2026-02-24,Shopping,750.00,Groceries
-55,2026-02-25,Food,210.00,Lunch
-56,2026-02-26,Transport,180.00,Uber
-57,2026-02-27,Health,150.00,Dentist
-58,2026-02-28,Food,340.00,Dinner
-59,2026-03-01,Utilities,600.00,Water Bill
-60,2026-03-02,Food,120.00,Breakfast
-61,2026-03-03,Transport,30.00,MRT
-62,2026-03-04,Shopping,2100.00,Mechanical Keyboard
-63,2026-03-05,Food,250.00,Lunch
-64,2026-03-06,Entertainment,450.00,Game Top-up
-65,2026-03-07,Food,180.00,Dinner
-66,2026-03-08,Transport,500.00,Gas
-67,2026-03-09,Shopping,320.00,Books
-68,2026-03-10,Food,70.00,Coffee
-69,2026-03-11,Health,400.00,Pharmacy
-70,2026-03-12,Food,190.00,Lunch
-71,2026-03-13,Transport,35.00,Bus
-72,2026-03-14,Utilities,1100.00,Electricity Bill
-73,2026-03-15,Entertainment,350.00,Movie Ticket
-74,2026-03-16,Food,220.00,Dinner
-75,2026-03-17,Shopping,850.00,Groceries
-76,2026-03-18,Food,110.00,Breakfast
-77,2026-03-19,Transport,130.00,Uber
-78,2026-03-20,Food,270.00,Lunch
-79,2026-03-21,Shopping,1500.00,Backpack
-80,2026-03-22,Entertainment,800.00,Theme Park
-81,2026-03-23,Food,160.00,Dinner
-82,2026-03-24,Transport,30.00,MRT
-83,2026-03-25,Health,200.00,Clinic
-84,2026-03-26,Food,85.00,Snacks
-85,2026-03-27,Shopping,420.00,Stationery
-86,2026-03-28,Food,230.00,Lunch
-87,2026-03-29,Transport,45.00,Train
-88,2026-03-30,Utilities,800.00,Internet Bill
-89,2026-04-01,Food,140.00,Breakfast
-90,2026-04-02,Entertainment,1200.00,Subscription
-91,2026-04-03,Transport,500.00,Gas
-92,2026-04-04,Food,310.00,Dinner
-93,2026-04-05,Shopping,950.00,Groceries
-94,2026-04-06,Food,65.00,Coffee
-95,2026-04-07,Transport,30.00,MRT
-96,2026-04-08,Health,300.00,Vitamins
-97,2026-04-09,Food,180.00,Lunch
 98,2026-04-10,Shopping,3800.00,Headphones
+44,2026-02-14,Entertainment,2500.00,Valentine Dinner
+17,2026-01-17,Shopping,2300.00,Shoes
+62,2026-03-04,Shopping,2100.00,Mechanical Keyboard
+79,2026-03-21,Shopping,1500.00,Backpack
+15,2026-01-15,Entertainment,1500.00,Concert Ticket
+4,2026-01-04,Shopping,1200.00,Clothes
+90,2026-04-02,Entertainment,1200.00,Subscription
+32,2026-02-02,Utilities,1200.00,Electricity Bill
+72,2026-03-14,Utilities,1100.00,Electricity Bill
+43,2026-02-13,Shopping,1100.00,Jacket
+93,2026-04-05,Shopping,950.00,Groceries
+23,2026-01-23,Shopping,890.00,Groceries
+75,2026-03-17,Shopping,850.00,Groceries
+47,2026-02-17,Utilities,800.00,Internet Bill
+7,2026-01-07,Utilities,800.00,Internet Bill
+80,2026-03-22,Entertainment,800.00,Theme Park
+88,2026-03-30,Utilities,800.00,Internet Bill
+40,2026-02-10,Health,800.00,Vitamins
+54,2026-02-24,Shopping,750.00,Groceries
+20,2026-01-20,Utilities,650.00,Water Bill
+59,2026-03-01,Utilities,600.00,Water Bill
+52,2026-02-22,Entertainment,600.00,Exhibition
+66,2026-03-08,Transport,500.00,Gas
+8,2026-01-08,Transport,500.00,Gas
+46,2026-02-16,Transport,500.00,Gas
 99,2026-04-11,Entertainment,500.00,Karaoke
+13,2026-01-13,Health,500.00,Pharmacy
+91,2026-04-03,Transport,500.00,Gas
+10,2026-01-10,Shopping,450.00,Books
+64,2026-03-06,Entertainment,450.00,Game Top-up
+36,2026-02-06,Shopping,450.00,Stationery
+85,2026-03-27,Shopping,420.00,Stationery
+69,2026-03-11,Health,400.00,Pharmacy
+25,2026-01-25,Entertainment,400.00,Board Game
+73,2026-03-15,Entertainment,350.00,Movie Ticket
+5,2026-01-05,Entertainment,350.00,Movie Ticket
+29,2026-01-29,Food,350.00,Dinner
+58,2026-02-28,Food,340.00,Dinner
+67,2026-03-09,Shopping,320.00,Books
+35,2026-02-05,Entertainment,320.00,Movie
+92,2026-04-04,Food,310.00,Dinner
+49,2026-02-19,Shopping,300.00,Gift
+11,2026-01-11,Food,300.00,Lunch with friends
+96,2026-04-08,Health,300.00,Vitamins
+48,2026-02-18,Food,280.00,Lunch
+78,2026-03-20,Food,270.00,Lunch
+3,2026-01-03,Food,250.00,Lunch
 100,2026-04-12,Food,250.00,Dinner
+63,2026-03-05,Food,250.00,Lunch
+86,2026-03-28,Food,230.00,Lunch
+74,2026-03-16,Food,220.00,Dinner
+34,2026-02-04,Food,220.00,Lunch
+21,2026-01-21,Food,210.00,Dinner
+55,2026-02-25,Food,210.00,Lunch
+28,2026-01-28,Health,200.00,Clinic
+83,2026-03-25,Health,200.00,Clinic
+37,2026-02-07,Food,190.00,Dinner
+70,2026-03-12,Food,190.00,Lunch
+65,2026-03-07,Food,180.00,Dinner
+14,2026-01-14,Food,180.00,Dinner
+56,2026-02-26,Transport,180.00,Uber
+97,2026-04-09,Food,180.00,Lunch
+50,2026-02-20,Food,170.00,Dinner
+26,2026-01-26,Food,160.00,Lunch
+81,2026-03-23,Food,160.00,Dinner
+57,2026-02-27,Health,150.00,Dentist
+38,2026-02-08,Transport,150.00,Uber
+1,2026-01-02,Food,150.00,Breakfast
+41,2026-02-11,Food,145.00,Lunch
+89,2026-04-01,Food,140.00,Breakfast
+19,2026-01-19,Food,140.00,Lunch
+77,2026-03-19,Transport,130.00,Uber
+31,2026-02-01,Food,130.00,Breakfast
+18,2026-01-18,Transport,120.00,Uber
+60,2026-03-02,Food,120.00,Breakfast
+6,2026-01-06,Food,120.00,Dinner
+76,2026-03-18,Food,110.00,Breakfast
+45,2026-02-15,Food,100.00,Breakfast
+53,2026-02-23,Food,90.00,Snacks
+16,2026-01-16,Food,85.00,Snacks
+84,2026-03-26,Food,85.00,Snacks
+24,2026-01-24,Food,75.00,Breakfast
+68,2026-03-10,Food,70.00,Coffee
+94,2026-04-06,Food,65.00,Coffee
+39,2026-02-09,Food,65.00,Coffee
+9,2026-01-09,Food,60.00,Coffee
+87,2026-03-29,Transport,45.00,Train
+33,2026-02-03,Transport,35.00,Bus
+51,2026-02-21,Transport,35.00,Bus
+12,2026-01-12,Transport,35.00,Bus
+71,2026-03-13,Transport,35.00,Bus
+95,2026-04-07,Transport,30.00,MRT
+82,2026-03-24,Transport,30.00,MRT
+42,2026-02-12,Transport,30.00,MRT
+61,2026-03-03,Transport,30.00,MRT
+2,2026-01-02,Transport,30.00,MRT
+27,2026-01-27,Transport,30.00,MRT
+22,2026-01-22,Transport,30.00,MRT

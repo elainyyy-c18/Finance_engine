@@ -11,19 +11,22 @@
 ## 🚀 核心功能
 - **互動式終端機介面**：提供使用者友善的選單系統，可即時切換不同的數據處理與檢視模式。
 - **多維度高效能排序**：實作多個 Comparator Functions，結合時間複雜度 $O(n \log n)$ 的 `qsort` 演算法，允許使用者按「金額」、「日期」或「會計科目」動態重新排列數據。
-- **CSV 自動化解析**：讀取標準財務數據格式，將非結構化文本精準轉為高效的 `struct` 結構體。
+- **自動化財務摘要 (Category Summary)**：整合數據聚合邏輯，能自動按會計科目進行金額加總，生成類別財務報表。
 - **資料持久化匯出**：支援將**當前排序結果**匯出為標準 CSV 格式，實現與外部報表系統（如 Excel）的無縫對接。
 - **動態記憶體管理**：透過 `malloc` 與 `free` 在 Heap 區動態配置資源，確保在大規模運算下依然保有高穩定性與零洩漏（Zero Leak）。
 
 ## 🛠️ 技術細節
 - **開發語言**：C11
+- **模組化架構 (Modular Design)**：將程式拆分為 `main.c` (入口)、`finance_engine.c` (邏輯實作) 與 `finance_engine.h` (介面定義)，遵循軟體工程的封裝與職責分離原則。
 - **核心資料結構**：Structured Arrays, Dynamic Memory (Heap)
 - **進階指標應用**：使用 **Function Pointers** 驅動多重排序邏輯。
 - **Amortized Time 分析**：採用翻倍擴張策略，使資料插入的時間複雜度在平攤後仍保持極高效的 **$O(1)$ Amortized Time**。
 
 ## 📂 檔案說明
-- `finance_engine.c`: 專案主程式原始碼。
-- `data.csv`: 測試數據檔案（包含模擬日常開銷的紀錄）。
+- `main.c`: 處理使用者互動選單與檔案讀取流。
+- `finance_engine.c`: 核心演算法實作（排序、匯出、數據摘要）。
+- `finance_engine.h`: 結構體定義與函式介面宣告。
+- `data.csv`: 測試數據檔案（包含模擬日常開銷紀錄）。
 - `sorted_export.csv`: (執行選單選項 4 後產生) 經由引擎處理並匯出的結構化數據。
 
 ## 📝 技術筆記：系統架構設計
@@ -33,10 +36,10 @@
 3. **原生 CSV 解析**：不依賴外部函式庫，利用 `fgets` 逐行讀取文本避免溢位，並透過 `strtok` 進行數據型態轉換與映射。
 
 ## 📈 執行方式
-1. 將 `data.csv` 置於與執行檔相同的路徑下。
+1. 將 `data.csv` 置於根目錄。
 2. 在終端機編譯：
    ```bash
-   gcc finance_engine.c -o finance_engine
+   gcc main.c finance_engine.c -o finance_engine
    ./finance_engine
 
 ## ✅ 執行截圖
@@ -45,7 +48,3 @@
 
 ### 2. 執行選單選項 4 後匯出至 Excel (CSV 格式)：
 <img width="1919" height="1131" alt="image" src="https://github.com/user-attachments/assets/032d6fd0-c3a2-492f-93d1-3f7d97c0d2d1" />
-
-
-
-
