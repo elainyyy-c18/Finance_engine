@@ -47,7 +47,7 @@ void generateCategorySummary(Transaction *list, int count)
 
 void exportToCSV(Transaction *list, int count) 
 {
-    FILE *file = fopen("sorted_export.csv", "w");
+    FILE *file = fopen("output/sorted_export.csv", "w");
     if (!file) return;
     fprintf(file, "id,date,category,amount,description\n");
     for (int i = 0; i < count; i++) 
