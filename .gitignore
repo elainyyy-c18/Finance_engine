@@ -1,0 +1,12 @@
+# 編譯產生的執行檔
+*.exe
+finance_engine
+
+# 物件檔案
+*.o
+
+# 數據匯出檔案 (避免推送到 GitHub)
+sorted_export.csv
+
+# VS Code 設定檔
+.vscode/

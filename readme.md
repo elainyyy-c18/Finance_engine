@@ -39,7 +39,7 @@
 1. 將 `data.csv` 置於根目錄。
 2. 在終端機編譯：
    ```bash
-   gcc main.c finance_engine.c -o finance_engine
+    gcc -Iinclude src/main.c src/finance_engine.c -o finance_engine
    ./finance_engine
 
 ## ✅ 執行截圖
