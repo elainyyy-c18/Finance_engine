@@ -64,7 +64,7 @@
 ### 2. 執行選單選項 4 後匯出至 Excel (CSV 格式)：(以選項 1 的排序為例)
 <img width="1919" height="1131" alt="image" src="https://github.com/user-attachments/assets/032d6fd0-c3a2-492f-93d1-3f7d97c0d2d1" />
 
-## 🔮 未來展望 (Future Work)
+## 🔮 未來展望
 - **錯誤處理機制優化**：加入對 CSV 毀損或格式錯誤的Error Handling。
 - **支援多重檔案合併**：實作External Sort，處理單一記憶體無法負擔的巨量數據。
 - **資料庫整合**：將 CSV 資料流與 SQL 資料庫對接，模擬真實財務系統的後端儲存。
