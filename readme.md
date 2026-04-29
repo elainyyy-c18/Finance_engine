@@ -21,7 +21,7 @@
 - **進階指標應用**：使用 **Function Pointers** 驅動多重排序邏輯，增加系統的可擴充性。
 - **Amortized Time 分析**：採用翻倍擴張策略（Doubling strategy），使資料插入的時間複雜度在平攤後仍保持極高效的 **$O(1)$ Amortized Time**。
 
-## 📂 檔案說明
+## 📂 目錄結構
 ```text
 115finance_engine/
 ├── include/              # 標頭檔定義 (.h)
@@ -31,8 +31,9 @@
 │   └── main.c
 ├── data/                 # 財務數據檔案 (.csv)
 │   └── data.csv
+├── Makefile              # 自動化建置腳本
 ├── .gitignore            # 版本控制忽略規範
-└── README.md
+└── README.md             # 專案說明文件
 ```
 - `main.c`: 處理使用者互動選單與檔案讀取流。
 - `finance_engine.c`: 核心演算法實作（排序、匯出、數據摘要）。
@@ -46,9 +47,15 @@
 3. **版本控制規範**：透過 `.gitignore` 嚴格過濾編譯產生的執行檔與動態生成的結果檔，僅保留核心程式碼與必要數據，體現版本管理意識。
 
 ## 📈 執行方式
+本專案支援跨平台建置，請先確保 data.csv 位於 data/ 資料夾下，並於專案根目錄開啟終端機：
+【方法一】使用 Makefile (推薦，適用於 Linux / macOS / MinGW)
 1. 編譯：`make`
 2. 執行：`./finance_engine`
 3. 清除垃圾檔案：`make clean`
+
+【方法二】手動編譯 (適用於無 make 工具之 Windows 環境)
+1. 編譯：`gcc -Iinclude src/main.c src/finance_engine.c -o finance_engine`
+2. 執行：`./finance_engine`
 
 ## ✅ 執行截圖
 ### 1. 互動式選單與數據預覽
@@ -61,3 +68,4 @@
 - **錯誤處理機制優化**：加入對 CSV 毀損或格式錯誤的Error Handling。
 - **支援多重檔案合併**：實作External Sort，處理單一記憶體無法負擔的巨量數據。
 - **資料庫整合**：將 CSV 資料流與 SQL 資料庫對接，模擬真實財務系統的後端儲存。
+- **浮點數誤差處理**：目前專案原型使用 `double` 處理金額，但在真實財務系統中，IEEE 754 的浮點數誤差是不被允許的。未來計畫實作大數運算，將金額轉為整數進行底層運算，徹底根除精確度遺失的問題。
