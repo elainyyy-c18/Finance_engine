@@ -46,5 +46,5 @@
 ### 1. 互動式選單與數據預覽
 <img width="1821" height="1019" alt="image" src="https://github.com/user-attachments/assets/f07debaa-7eca-487d-ac50-7cb5ff71716e" />
 
-### 2. 執行選單選項 4 後匯出至 Excel (CSV 格式)：
+### 2. 執行選單選項 4 後匯出至 Excel (CSV 格式)：(以選項 1 的排序為例)
 <img width="1919" height="1131" alt="image" src="https://github.com/user-attachments/assets/032d6fd0-c3a2-492f-93d1-3f7d97c0d2d1" />
