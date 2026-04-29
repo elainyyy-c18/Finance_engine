@@ -10,3 +10,7 @@ sorted_export.csv
 
 # VS Code 設定檔
 .vscode/
+
+# 忽略任何地方產出的 CSV 結果檔
+data/data.csv
+output/sorted_export.csv

@@ -1,8 +1,10 @@
 #include "finance_engine.h"
 
-int main() {
-    FILE *file = fopen("data.csv", "r");
-    if (!file) {
+int main() 
+{
+    FILE *file = fopen("data/data.csv", "r");
+    if (!file) 
+    {
         printf("Error: data.csv not found.\n");
         return 1;
     }
@@ -12,8 +14,10 @@ int main() {
     char line[200];
     fgets(line, sizeof(line), file); // Skip header
 
-    while (fgets(line, sizeof(line), file)) {
-        if (count >= capacity) {
+    while (fgets(line, sizeof(line), file)) 
+    {
+        if (count >= capacity) 
+        {
             capacity *= 2;
             list = (Transaction *)realloc(list, capacity * sizeof(Transaction));
         }
@@ -24,7 +28,8 @@ int main() {
         token = strtok(NULL, ","); strcpy(list[count].category, token);
         token = strtok(NULL, ","); list[count].amount = atof(token);
         token = strtok(NULL, ",");
-        if (token) {
+        if (token) 
+        {
             token[strcspn(token, "\n")] = 0;
             strcpy(list[count].description, token);
         }
@@ -33,12 +38,14 @@ int main() {
     fclose(file);
 
     int choice;
-    while (1) {
+    while (1) 
+    {
         printf("\n[1] Amount Sort [2] Date Sort [3] Category Sort\n");
         printf("[4] EXPORT CSV  [5] SUMMARY    [6] EXIT\nChoice: ");
         if (scanf("%d", &choice) != 1 || choice == 6) break;
 
-        switch (choice) {
+        switch (choice) 
+        {
             case 1: qsort(list, count, sizeof(Transaction), compareByAmount); break;
             case 2: qsort(list, count, sizeof(Transaction), compareByDate); break;
             case 3: qsort(list, count, sizeof(Transaction), compareByCategory); break;
