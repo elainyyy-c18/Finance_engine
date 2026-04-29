@@ -22,14 +22,7 @@
 - **Amortized Time 分析**：採用翻倍擴張策略（Doubling strategy），使資料插入的時間複雜度在平攤後仍保持極高效的 **$O(1)$ Amortized Time**。
 
 ## 📂 檔案說明
-- `main.c`: 處理使用者互動選單與檔案讀取流。
-- `finance_engine.c`: 核心演算法實作（排序、匯出、數據摘要）。
-- `finance_engine.h`: 結構體定義與函式介面宣告。
-- `data.csv`: 測試數據檔案（包含模擬日常開銷紀錄）。
-- `sorted_export.csv`: (執行選單選項 4 後產生) 經由引擎處理並匯出的結構化數據。
-
-  ```text
-
+```text
 115finance_engine/
 ├── include/              # 標頭檔定義 (.h)
 │   └── finance_engine.h
@@ -40,6 +33,12 @@
 │   └── data.csv
 ├── .gitignore            # 版本控制忽略規範
 └── README.md
+```
+- `main.c`: 處理使用者互動選單與檔案讀取流。
+- `finance_engine.c`: 核心演算法實作（排序、匯出、數據摘要）。
+- `finance_engine.h`: 結構體定義與函式介面宣告。
+- `data.csv`: 測試數據檔案（包含模擬日常開銷紀錄）。
+- `sorted_export.csv`: (執行選單選項 4 後產生) 經由引擎處理並匯出的結構化數據。
 
 ## 📝 技術筆記：系統架構設計與 Git 管理
 1. **運算與存取功能拆分**：為了保有系統的彈性，我將**運算與存取**功能拆分。使用者可先進行預覽，確認無誤後再執行資料持久化，以避免頻繁的磁碟 I/O，優化系統效能。
